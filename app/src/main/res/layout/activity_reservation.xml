@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReservationActivity">
+
+   <ImageView
+       android:layout_width="200dp"
+       android:layout_height="200dp"
+       android:src="@drawable/logo"
+       android:layout_margin="6dp"
+       android:padding="4dp"
+       android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/Res"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1771B9"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center"
+        android:text="حجز"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="تسجيل دخول المواظفين"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:width="1dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/porder"/>
+    </com.google.android.material.textfield.TextInputLayout>
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/progress"
+    android:layout_gravity="center"
+    android:visibility="gone"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp">
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/porder"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/forg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forget password"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn"
+        android:backgroundTint="#1771B9"
+        android:text="login"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn"
+        android:backgroundTint="#1771B9"
+        android:text="create new accont"/>
+
+
+
+
+
+
+
+
+</LinearLayout>
