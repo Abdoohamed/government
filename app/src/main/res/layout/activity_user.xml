@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActivity">
+
+    <ImageView
+        android:id="@+id/build"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_build_24"
+        android:layout_margin="20dp"
+        android:padding="6dp"
+        android:backgroundTint="@color/black"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_margin="6dp"/>
+    <EditText
+        android:id="@+id/sname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="10dp"
+        android:width="4dp"
+        android:inputType="text"
+        android:background="@drawable/porder"/>
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="10dp"
+        android:width="4dp"
+        android:inputType="text"
+        android:background="@drawable/porder"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/again"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_margin="50dp"
+            android:width="1dp"
+            android:background="@color/black"
+            android:textColor="#FFFFFF"
+            android:text="again"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/black"
+            android:text="next"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Government">
         <activity
+            android:name=".ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".serviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".confirmPhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplachActivity"
             android:exported="true">
             <intent-filter>
@@ -17,11 +38,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ReservationActivity"
-            android:exported="true">
-
         </activity>
     </application>
 

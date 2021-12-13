@@ -6,9 +6,19 @@
         <entry key="..\:/government/app/src/main/res/drawable/btn.xml" value="0.1921875" />
         <entry key="..\:/government/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/government/app/src/main/res/drawable/porder.xml" value="0.1921875" />
+        <entry key="..\:/government/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.10985352862849534" />
+        <entry key="..\:/government/app/src/main/res/layout-w936dp/activity_login.xml" value="0.12890625" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_confirm_phone.xml" value="0.15416666666666667" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_create.xml" value="0.22" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_forget_password.xml" value="0.171875" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_login.xml" value="0.171875" />
         <entry key="..\:/government/app/src/main/res/layout/activity_main.xml" value="0.171875" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_phone.xml" value="0.25" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_rec.xml" value="0.22" />
         <entry key="..\:/government/app/src/main/res/layout/activity_reservation.xml" value="0.22" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_service.xml" value="0.15" />
         <entry key="..\:/government/app/src/main/res/layout/activity_splach2.xml" value="0.171875" />
+        <entry key="..\:/government/app/src/main/res/layout/activity_user.xml" value="0.22" />
         <entry key="..\:/government/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1884576098059244" />
       </map>
     </option>
