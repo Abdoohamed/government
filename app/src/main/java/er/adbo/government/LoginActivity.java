@@ -20,8 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private ProgressBar lprogressBar;
-    private EditText lEmail,lPass;
-    private Button llogin,lcreate,lres;
+    private EditText lEmail, lPass;
+    private Button llogin, lcreate, lres;
     private FirebaseAuth fAuth;
 
     @Override
@@ -39,72 +39,87 @@ public class LoginActivity extends AppCompatActivity {
         llogin = findViewById(R.id.login_btn);
         lcreate = findViewById(R.id.create_btn);
         lres = findViewById(R.id.Res_btn);
+
+        lres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,PhoneActivity.class));
+            }
+        });
+
         lcreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,CreateActivity.class));
+                startActivity(new Intent(LoginActivity.this, CreateActivity.class));
+
+
             }
+
+
         });
         llogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email=lEmail.getText().toString().trim();
-                String password=lPass.getText().toString().trim();
-                if (validationdata(email ,password))
-                {
-                    register(email,password);
+                String email = lEmail.getText().toString().trim();
+                String password = lPass.getText().toString().trim();
+                if (validationdata(email, password)) {
+                    register(email, password);
                 }
-
 
 
             }
         });
-    }
-    private boolean  validationdata(String email , String password){
 
-        if(email.isEmpty()){
+
+    }
+
+    private boolean validationdata(String email, String password) {
+
+        if (email.isEmpty()) {
             Toast.makeText(LoginActivity.this, "Please add ur email", Toast.LENGTH_SHORT).show();
             lEmail.requestFocus();
             return false;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             Toast.makeText(LoginActivity.this, "Please add valid email", Toast.LENGTH_SHORT).show();
             lEmail.requestFocus();
             return false;
         }
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             Toast.makeText(LoginActivity.this, "Please add ur password", Toast.LENGTH_SHORT).show();
             lPass.requestFocus();
             return false;
         }
-        if(password.length()<6){
+        if (password.length() < 6) {
             Toast.makeText(LoginActivity.this, " password should be 6char", Toast.LENGTH_SHORT).show();
             lPass.requestFocus();
             return false;
         }
-return  true ;
+        return true;
     }
+
 
 
     private void register(String email, String password) {
         lprogressBar.setVisibility(View.VISIBLE);
 
-        fAuth.signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>()  {
+        fAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             lprogressBar.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "sing in Successfuly", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginActivity.this,UserActivity.class));
+                            startActivity(new Intent(LoginActivity.this, UserActivity.class));
                         }
                         //handel error
                         else {
                             lprogressBar.setVisibility(View.GONE);
-                            Toast.makeText(LoginActivity.this, "Error"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
+
 
                     }
                 });
@@ -113,12 +128,16 @@ return  true ;
 
     public void forget(View view) {
         startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class));
+
+
     }
 
-
-
-
 }
+
+
+
+
+
 
 
 
